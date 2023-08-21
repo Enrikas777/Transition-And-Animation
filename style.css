@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,400;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --bar_thickness:0.5rem;
+    --bar_length:5rem;
+  }
+  
+  .crosshair::before{
+    content:"";
+    display:block;
+    background-color:black;
+    height:var(--bar_length);
+    width:var(--bar_thickness);
+    position:relative;
+    transform:rotate(90deg);
+  }
+  
+  .crosshair {
+    margin:4rem;
+    background-color:black;
+    height:var(--bar_length);
+    width:var(--bar_thickness);
+    transition-property: transform;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+  }
+  
+  .crosshair::after{
+    content:"";
+    display:block;
+    background-color:white;
+    height:calc( var(--bar_length) * 0.1);
+    width:calc( var(--bar_length) * 0.1);
+    position:relative;
+    bottom:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+  }
+
+  .crosshair:hover {
+    transform: translateX(650px);
+  }
+
+  :root{
+    --bar_thickness:0.5rem;
+    --bar_length:5rem;
+  }
+  
+  .crosshair2::before{
+    content:"";
+    display:block;
+    background-color:black;
+    height:var(--bar_length);
+    width:var(--bar_thickness);
+    position:relative;
+    transform:rotate(90deg);
+  }
+  
+  .crosshair2 {
+    margin:4rem;
+    background-color:black;
+    height:var(--bar_length);
+    width:var(--bar_thickness);
+    transition-property: transform;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+  }
+  
+  .crosshair2::after{
+    content:"";
+    display:block;
+    background-color:white;
+    height:calc( var(--bar_length) * 0.1);
+    width:calc( var(--bar_length) * 0.1);
+    position:relative;
+    bottom:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+  }
+
+body {
+    font-family: 'Merriweather', serif;
+    padding: 20px;
+    background: #2400c7;
+    color: #22f858; 
+    text-align: center;
+    line-height: 50px;
+}
+
+.container {
+    background:#9422f8;
+    /* height: 100px; */
+    max-width: 800px;
+    max-height: 200px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 1px;
+    cursor: pointer;
+
+}
+
+@keyframes crosshair2 {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(650px);
+  }
+
+}
+
+.crosshair2 {
+  animation-name: crosshair2;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  
+  
+}
+
+
